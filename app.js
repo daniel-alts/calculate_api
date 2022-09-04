@@ -1,46 +1,43 @@
-const http = require('http');
-const mathM = require('./math')
+const supertest = require("supertest");
+const server = require("../../app");
 
+describe("Calculate", () => {
+  it("POST /calculate: action: sum", async () => {
+    const response = await supertest(server).post("/calculate").send({
+      action: "sum",
+      num1: 20,
+      num2: 10,
+    });
 
-const PORT = 3000;
-
-const handleRequest = (req, res) => {
-    const {url, method } = req;
-    const body = [];
-    let result
-
-    if (url === '/calculate' && method === 'POST') {
-        req.on('data', (chunk) => {
-            body.push(chunk);
-        });
-
-        req.on('end', () => {
-            const parsedBody = Buffer.concat(body).toString()
-            const bodyObject = JSON.parse(parsedBody);
-
-            const { action, num1, num2 } = bodyObject
-
-            if (action === 'sum') {
-                result = mathM.add(num1, num2)
-            } else if (action === 'subtract') {
-                result = mathM.subtract(num1, num2)
-            } else if (action === 'divide') {
-                result = mathM.divide(num1, num2)
-            } else if (action === 'multiply') {
-                result = mathM.multiply(num1, num2)
-            }
-
-            res.end(JSON.stringify({ result }))
-        })
-
-        
-    }
-}
-
-const server = http.createServer(handleRequest);
-
-server.listen(PORT, () => {
-    console.log(`Server is listening on port: ${PORT}`)
-})
-
-module.exports = server;
+    // console.log({ response });
+    expect(response.status).toBe(200);
+    expect(response.text).toBe(JSON.stringify({ result: 30 }));
+  });
+  it("POST /calculate: action: subtract", async () => {
+    const response = await supertest(server).post("/calculate").send({
+      action: "subtract",
+      num1: 50,
+      num2: 30,
+    });
+    expect(response.status).toBe(200);
+    expect(response.text).toBe(JSON.stringify({ result: 20 }));
+  });
+  it("POST /calculate: action: divide", async () => {
+    const response = await supertest(server).post("/calculate").send({
+      action: "divide",
+      num1: 50,
+      num2: 25,
+    });
+    expect(response.status).toBe(200);
+    expect(response.text).toBe(JSON.stringify({ result: 2 }));
+  });
+  it("POST /calculate: action: multiply", async () => {
+    const response = await supertest(server).post("/calculate").send({
+      action: "multiply",
+      num1: 2,
+      num2: 4,
+    });
+    expect(response.status).toBe(200);
+    expect(response.text).toBe(JSON.stringify({ result: 8 }));
+  });
+});
