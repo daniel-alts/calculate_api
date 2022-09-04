@@ -1,7 +1,7 @@
 const http = require('http');
 const mathM = require('./math')
 
-
+const host_name = 'localhost'
 const PORT = 3000;
 
 const handleRequest = (req, res) => {
@@ -39,7 +39,7 @@ const handleRequest = (req, res) => {
 
 const server = http.createServer(handleRequest);
 
-server.listen(PORT, () => {
+server.listen(PORT,host_name, () => {
     console.log(`Server is listening on port: ${PORT}`)
 })
 
