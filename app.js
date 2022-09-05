@@ -30,7 +30,7 @@ const handleRequest = (req, res) => {
                 result = mathM.multiply(num1, num2)
             }
 
-            res.end(JSON.stringify({ result }))
+            res.end(JSON.stringify( result ))
         })
 
         
