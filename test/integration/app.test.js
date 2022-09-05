@@ -25,7 +25,6 @@ describe("Calculate", () => {
         expect(response.status).toBe(200)
         expect(response.text).toBe(JSON.stringify({ result: 10 }))
     })
-
     it('POST /calculate: action: divide', async () => {
         const response = await supertest(server).post('/calculate').send({
             action: 'divide',
