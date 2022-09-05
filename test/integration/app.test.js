@@ -2,6 +2,7 @@ const supertest = require('supertest');
 const server = require('../../app');
 
 
+
 describe("Calculate", () => {
     it('POST /calculate: action: sum', async () => {
         const response = await supertest(server).post('/calculate').send({
@@ -12,6 +13,16 @@ describe("Calculate", () => {
 
         // console.log({response})
         expect(response.status).toBe(200)
-        expect(response.body).toBe(JSON.stringify({ result: 30 }))
+
+        const body = [];
+        response.on('data', (chunk) => {
+            body.push(chunk);
+        });
+
+        response.on('end', () => {
+            const parsedBody = Buffer.concat(body).toString();
+            expect(parsedBody).toBe(JSON.stringify({ result: 30 }))
+        });
+        
     })
 })
