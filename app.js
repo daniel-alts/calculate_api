@@ -2,8 +2,6 @@ const http = require('http');
 const mathM = require('./math')
 
 
-const PORT = 3000;
-
 const handleRequest = (req, res) => {
     const {url, method } = req;
     const body = [];
@@ -37,10 +35,6 @@ const handleRequest = (req, res) => {
     }
 }
 
-const server = http.createServer(handleRequest);
+const app = http.createServer(handleRequest);
 
-server.listen(PORT, () => {
-    console.log(`Server is listening on port: ${PORT}`)
-})
-
-module.exports = server;
+module.exports = app;
