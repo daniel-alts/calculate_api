@@ -10,8 +10,8 @@ describe("Calculate", () => {
             num2: 10
         })
 
-        // console.log({response})
+        // console.log(response.text)
         expect(response.status).toBe(200)
-        expect(response.body).toBe(JSON.stringify({ result: 30 }))
+        expect(response.text).toBe(JSON.stringify({ result: 30 }))
     })
 })
