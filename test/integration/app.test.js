@@ -12,7 +12,7 @@ describe("Calculate", () => {
 
         console.log({response})
         expect(response.status).toBe(200)
-        // expect(response.body).toBe(JSON.stringify({ result: 30 }))
+        expect(response.text).toBe(JSON.stringify({ result: 30 }))
     })
 
       //integration testing for subtraction 
@@ -25,9 +25,9 @@ describe("Calculate", () => {
         })
 
        
-         console.log({response})
+           console.log({response})
            expect(response.status).toBe(200)
-        //  expect(response.body).toBe({result:30})
+           expect(response.text).toBe(JSON.stringify({result:10}))
     })
 
 
@@ -41,9 +41,9 @@ describe("Calculate", () => {
         })
 
        
-         console.log({response})
+           console.log({response})
            expect(response.status).toBe(200)
-        //  expect(response.body).toBe({result:30})
+           expect(response.text).toBe(JSON.stringify({result:2}))
     })
 
 
@@ -57,8 +57,8 @@ describe("Calculate", () => {
         })
 
        
-         console.log({response})
+           console.log({response})
            expect(response.status).toBe(200)
-        //  expect(response.body).toBe({result:30})
+           expect(response.text).toBe(JSON.stringify({result:200}))
     })
 })
