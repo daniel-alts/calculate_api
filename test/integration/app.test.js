@@ -44,4 +44,25 @@ describe("Calculate", () => {
             expect(parsedBody).toBe(JSON.stringify({ result: 2 }))
         }); 
     });
+
+
+    it('POST /calculate: action: multiply', async () => {
+        const response = await supertest(server).post('/calculate').send({
+            action: 'multiply',
+            num1: 20,
+            num2: 10
+        });
+
+        expect(response.status).toBe(200);
+
+        const body = [];
+        response.on('data', (chunk) => {
+            body.push(chunk);
+        });
+
+        response.on('end', () => {
+            const parsedBody = Buffer.concat(body).toString();
+            expect(parsedBody).toBe(JSON.stringify({ result: 200 }))
+        }); 
+    });
 })
