@@ -31,6 +31,7 @@ const handleRequest = (req, res) => {
             }
 
             res.end(JSON.stringify({ result }))
+
         })
 
         
@@ -39,7 +40,7 @@ const handleRequest = (req, res) => {
 
 const server = http.createServer(handleRequest);
 
-server.listen(PORT, () => {
+server.listen(PORT, 'localhost', () => {
     console.log(`Server is listening on port: ${PORT}`)
 })
 
