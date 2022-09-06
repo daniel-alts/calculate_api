@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles.unref()",
     "start:dev": "nodemon app.js"
   },
   "keywords": [],
