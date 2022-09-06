@@ -17,7 +17,6 @@ const handleRequest = (req, res) => {
         req.on('end', () => {
             const parsedBody = Buffer.concat(body).toString()
             const bodyObject = JSON.parse(parsedBody);
-
             const { action, num1, num2 } = bodyObject
 
             if (action === 'sum') {
@@ -29,7 +28,8 @@ const handleRequest = (req, res) => {
             } else if (action === 'multiply') {
                 result = mathM.multiply(num1, num2)
             }
-
+            
+            res.writeHead(200, {"Content-Type": "application/json"});
             res.end(JSON.stringify({ result }))
         })
 
