@@ -2,7 +2,7 @@ const http = require('http');
 const mathM = require('./math')
 
 
-const PORT = 3000;
+const PORT = 8000;
 
 const handleRequest = (req, res) => {
     const {url, method } = req;
@@ -30,7 +30,7 @@ const handleRequest = (req, res) => {
                 result = mathM.multiply(num1, num2)
             }
 
-            res.end(JSON.stringify({ result }))
+            res.end(JSON.stringify({result}))
         })
 
         
