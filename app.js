@@ -40,7 +40,7 @@ const handleRequest = (req, res) => {
 const server = http.createServer(handleRequest);
 
 server.listen(PORT, HOSTNAME, () => {
-    console.log(`Server is listening on ${HOSTNAME}: ${PORT}`)
+    console.log(`Server is listening on ${HOSTNAME}:${PORT}`)
 })
 
 module.exports = server;
