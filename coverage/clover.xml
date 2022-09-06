@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1662411550909" clover="3.2.0">
-  <project timestamp="1662411550909" name="All files">
+<coverage generated="1662494545638" clover="3.2.0">
+  <project timestamp="1662494545638" name="All files">
     <metrics statements="32" coveredstatements="32" conditionals="12" coveredconditionals="10" methods="8" coveredmethods="8" elements="52" coveredelements="50" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
     <file name="app.js" path="C:\Users\USER\Desktop\NodeJs\Assignment\calculate_api\app.js">
       <metrics statements="27" coveredstatements="27" conditionals="12" coveredconditionals="10" methods="4" coveredmethods="4"/>

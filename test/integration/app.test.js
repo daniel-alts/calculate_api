@@ -2,7 +2,7 @@ const supertest = require("supertest");
 const server = require("../../app");
 
 describe("Calculate", () => {
-	it("POST /calculate: action: sum", async () => {
+	it("Send POST request to /calculate endpoint. Test for addition'", async () => {
 		const response = await supertest(server)
 			.post("/calculate")
 			.send({
@@ -18,7 +18,7 @@ describe("Calculate", () => {
 		);
 	});
 
-	it("POST /calculate: action: multiplt", async () => {
+	it("Send POST request to /calculate endpoint. Test for Multiplication'", async () => {
 		const response = await supertest(server)
 			.post("/calculate")
 			.send({
@@ -32,7 +32,7 @@ describe("Calculate", () => {
 			JSON.stringify({ result: 200 })
 		);
 	});
-	it("POST /calculate: action: divide", async () => {
+	it("Send POST request to /calculate endpoint. Test for division", async () => {
 		const response = await supertest(server)
 			.post("/calculate")
 			.send({
@@ -46,7 +46,7 @@ describe("Calculate", () => {
 			JSON.stringify({ result: 2 })
 		);
 	});
-	it("POST /calculate: action: subtract", async () => {
+	it("Send POST request to /calculate endpoint. Test for subtraction", async () => {
 		const response = await supertest(server)
 			.post("/calculate")
 			.send({
