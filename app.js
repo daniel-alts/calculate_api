@@ -4,7 +4,7 @@ const mathM = require('./math')
 
 const PORT = 3000;
 
-const handleRequest = (req, res) => {
+const handleRequest = async (req, res) => {
     const {url, method } = req;
     const body = [];
     let result
