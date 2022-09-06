@@ -7,7 +7,7 @@ const PORT = 3000;
 const handleRequest = (req, res) => {
     const {url, method } = req;
     const body = [];
-    let result
+    let result;
 
     if (url === '/calculate' && method === 'POST') {
         req.on('data', (chunk) => {
@@ -30,7 +30,7 @@ const handleRequest = (req, res) => {
                 result = mathM.multiply(num1, num2)
             }
 
-            res.end(JSON.stringify({ result }))
+            return res.end(JSON.stringify({result}))
         })
 
         
