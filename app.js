@@ -5,10 +5,11 @@ const mathM = require('./math')
 const PORT = 3000;
 
 const handleRequest = (req, res) => {
+    
     const {url, method } = req;
     const body = [];
     let result
-
+    
     if (url === '/calculate' && method === 'POST') {
         req.on('data', (chunk) => {
             body.push(chunk);
@@ -20,7 +21,7 @@ const handleRequest = (req, res) => {
 
             const { action, num1, num2 } = bodyObject
 
-            if (action === 'sum') {
+            if (action === 'sum') {                
                 result = mathM.add(num1, num2)
             } else if (action === 'subtract') {
                 result = mathM.subtract(num1, num2)
@@ -30,6 +31,7 @@ const handleRequest = (req, res) => {
                 result = mathM.multiply(num1, num2)
             }
 
+            // res.setHeader('Content-Type', 'application/json');
             res.end(JSON.stringify({ result }))
         })
 
