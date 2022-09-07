@@ -1,5 +1,5 @@
 const http = require('http');
-const mathM = require('./math')
+const mathM = require('./math');
 
 
 const PORT = 3000;
@@ -7,7 +7,7 @@ const PORT = 3000;
 const handleRequest = (req, res) => {
     const {url, method } = req;
     const body = [];
-    let result
+    let result;
 
     if (url === '/calculate' && method === 'POST') {
         req.on('data', (chunk) => {
@@ -15,7 +15,7 @@ const handleRequest = (req, res) => {
         });
 
         req.on('end', () => {
-            const parsedBody = Buffer.concat(body).toString()
+            const parsedBody = Buffer.concat(body).toString();
             const bodyObject = JSON.parse(parsedBody);
 
             const { action, num1, num2 } = bodyObject
@@ -30,10 +30,9 @@ const handleRequest = (req, res) => {
                 result = mathM.multiply(num1, num2)
             }
 
-            res.end(JSON.stringify({ result }))
-        })
+            res.end(JSON.stringify({ result }));
+        });
 
-        
     }
 }
 
@@ -41,6 +40,6 @@ const server = http.createServer(handleRequest);
 
 server.listen(PORT, () => {
     console.log(`Server is listening on port: ${PORT}`)
-})
+});
 
 module.exports = server;
