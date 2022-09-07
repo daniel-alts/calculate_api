@@ -22,11 +22,11 @@ const handleRequest = (req, res) => {
 
             if (action === 'sum') {
                 result = mathM.add(num1, num2)
-            } else if (action === 'subtract') {
+            } else if (action === 'sub') {
                 result = mathM.subtract(num1, num2)
-            } else if (action === 'divide') {
+            } else if (action === 'div') {
                 result = mathM.divide(num1, num2)
-            } else if (action === 'multiply') {
+            } else if (action === 'mul') {
                 result = mathM.multiply(num1, num2)
             }
 
