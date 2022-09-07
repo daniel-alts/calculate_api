@@ -1,7 +1,19 @@
+const http = require('http');
 const supertest = require("supertest");
-const server = require("../../app");
+const app = require("../../app");
 
 describe("Calculate", () => {
+  let server;
+
+  beforeAll((done) => {
+    server = http.createServer(app.handleRequest);
+    server.listen(done);
+  });
+
+  afterAll((done) => {
+    server.close(done);
+  });
+
 	it("POST /calculate: action: sum", async () => {
 		const response = await supertest(server).post("/calculate").send({
 			action: "sum",
