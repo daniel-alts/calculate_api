@@ -8,9 +8,39 @@ describe("Calculate", () => {
       num1: 20,
       num2: 10,
     });
-    const expectedResult = JSON.stringify({ result: 30 });
-    // console.log(response.body);
+
     expect(response.status).toBe(200);
     expect(response.body).toEqual({ result: 30 });
+  });
+
+  it("POST /calculate: action: subtract", async () => {
+    const response = await supertest(server).post("/calculate").send({
+      action: "subtract",
+      num1: 20,
+      num2: 10,
+    });
+
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({ result: 10 });
+  });
+
+  it("POST /calculate: action: divide", async () => {
+    const response = await supertest(server).post("/calculate").send({
+      action: "divide",
+      num1: 20,
+      num2: 10,
+    });
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({ result: 2 });
+  });
+
+  it("POST /calculate: action: multiply", async () => {
+    const response = await supertest(server).post("/calculate").send({
+      action: "multiply",
+      num1: 20,
+      num2: 10,
+    });
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({ result: 200 });
   });
 });
