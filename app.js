@@ -5,6 +5,8 @@ const mathM = require('./math')
 const PORT = 3000;
 
 const handleRequest = (req, res) => {
+   res.setHeader('Content-Type', 'application/json');
+  
     const {url, method } = req;
     const body = [];
     let result
