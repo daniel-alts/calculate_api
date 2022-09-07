@@ -1,5 +1,7 @@
 const supertest = require('supertest');
 const server = require('../../app');
+const mathM = require ("../math.js")
+
 
 
 describe("Calculate", () => {
@@ -12,6 +14,51 @@ describe("Calculate", () => {
 
         // console.log({response})
         expect(response.status).toBe(200)
-        expect(response.body).toBe(JSON.stringify({ result: 30 }))
+        expect(response.text).toBe(JSON.stringify({ result: 30 }))
+    })
+})
+
+
+describe("Calculate", () => {
+    it('POST /calculate: action: subtract', async () => {
+        const response = await supertest(server).post('/calculate').send({
+            action: 'subtract',
+            num1: 20,
+            num2: 10
+        })
+
+        // console.log({response})
+        expect(response.status).toBe(200)
+        expect(response.text).toBe(JSON.stringify({ result: 10 }))
+    })
+})
+
+
+describe("Calculate", () => {
+    it('POST /calculate: action: multiply', async () => {
+        const response = await supertest(server).post('/calculate').send({
+            action: 'multiply',
+            num1: 20,
+            num2: 10
+        })
+
+        // console.log({response})
+        expect(response.status).toBe(200)
+        expect(response.text).toBe(JSON.stringify({ result: 200 }))
+    })
+})
+
+
+describe("Calculate", () => {
+    it('POST /calculate: action: divide', async () => {
+        const response = await supertest(server).post('/calculate').send({
+            action: 'sum',
+            num1: 20,
+            num2: 10
+        })
+
+        // console.log({response})
+        expect(response.status).toBe(200)
+        expect(response.text).toBe(JSON.stringify({ result: 2 }))
     })
 })
