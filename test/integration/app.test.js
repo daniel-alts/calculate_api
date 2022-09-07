@@ -59,8 +59,6 @@ it('POST /calculate: action: divide', async () => {
 
 
 
-
-
 it('POST /calculate: action: multiply', async () => {
     const response = await supertest(server).post('/calculate').send({
         action: 'multiply',
