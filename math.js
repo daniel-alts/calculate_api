@@ -9,3 +9,18 @@ module.exports = {
     divide,
     multiply,
 }
+
+function calculate(a, sign, b) {
+    switch (sign) {
+      case "+":
+        return add(a, b);
+      case "-":
+        return subtract(a, b);
+      case "*":
+        return multiply(a, b);
+      case "/":
+        return divide(a, b);
+      default:
+        return "Please enter a valid sign (+, -, *, /)";
+    }
+  }
