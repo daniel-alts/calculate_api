@@ -1,7 +1,6 @@
 {
   "name": "calculate_api",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "jest",
@@ -16,5 +15,17 @@
   "dependencies": {
     "jest": "^29.0.2",
     "supertest": "^6.2.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-alts/calculate_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daniel-alts/calculate_api/issues"
+  },
+  "homepage": "https://github.com/daniel-alts/calculate_api#readme",
+  "description": ""
 }
