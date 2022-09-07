@@ -7,7 +7,7 @@ describe("Calculate", () => {
         const response = await supertest(server).post('/calculate').send({
             action: 'sum',
             num1: 20,
-            num2: 10
+            num2: 10;
         })
 
         // console.log({response})
