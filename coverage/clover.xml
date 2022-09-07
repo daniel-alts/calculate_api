@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1662552842448" clover="3.2.0">
+  <project timestamp="1662552842448" name="All files">
+    <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4" elements="13" coveredelements="13" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1"/>
+    <file name="math.js" path="C:\Users\ikshe\OneDrive\Documents\GitHub\calculate_api\math.js">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

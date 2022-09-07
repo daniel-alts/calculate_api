@@ -3,11 +3,11 @@ const mathM = require('./math')
 
 
 const PORT = 3000;
+const HOST_NAME = 'localhost'
 
 const handleRequest = (req, res) => {
     const {url, method } = req;
     const body = [];
-    let result
 
     if (url === '/calculate' && method === 'POST') {
         req.on('data', (chunk) => {
