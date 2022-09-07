@@ -12,6 +12,42 @@ describe("Calculate", () => {
 
         // console.log({response})
         expect(response.status).toBe(200)
-        expect(response.body).toBe(JSON.stringify({ result: 30 }))
+        expect(response.text).toBe(JSON.stringify({ result: 30 }))
     })
+})
+
+it('Send POST request to /calculate endpoint. Test for subtraction', async () => {
+    const reqBody = {
+        action: 'subtract',
+        num1: 100,
+        num2: 70
+    }
+    const response = await supertest(server).post('/calculate').send(reqBody)
+
+    expect(response.status).toBe(200)
+    expect(response.text).toBe(JSON.stringify({ result: 30 }))
+})
+
+it('Send POST request to /calculate endpoint. Test for division', async () => {
+    const reqBody = {
+        action: 'divide',
+        num1: 60,
+        num2: 2
+    }
+    const response = await supertest(server).post('/calculate').send(reqBody)
+
+    expect(response.status).toBe(200)
+    expect(response.text).toBe(JSON.stringify({ result: 30 }))
+})
+
+it('Send POST request to /calculate endpoint. Test for multiplication', async () => {
+    const reqBody = {
+        action: 'multiply',
+        num1: 100,
+        num2: 3
+    }
+    const response = await supertest(server).post('/calculate').send(reqBody)
+
+    expect(response.status).toBe(200)
+    expect(response.text).toBe(JSON.stringify({ result: 300 }))
 })
