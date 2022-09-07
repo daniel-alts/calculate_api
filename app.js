@@ -20,8 +20,10 @@ const handleRequest = (req, res) => {
 
             const { action, num1, num2 } = bodyObject
 
-            if (action === 'sum') {
-                result = mathM.add(num1, num2)
+            if (action === 'sum'){
+               console.log(action, "yes") ; 
+               result = mathM.add(num1, num2)
+               console.log(result, "yesooo") ; 
             } else if (action === 'subtract') {
                 result = mathM.subtract(num1, num2)
             } else if (action === 'divide') {
@@ -29,8 +31,10 @@ const handleRequest = (req, res) => {
             } else if (action === 'multiply') {
                 result = mathM.multiply(num1, num2)
             }
-
+            console.log(JSON.stringify({ result }), "yesooopppp") ; 
             res.end(JSON.stringify({ result }))
+
+            console.log(JSON.stringify({ result }), "Noooopppp") ; 
         })
 
         
