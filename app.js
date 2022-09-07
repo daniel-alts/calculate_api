@@ -22,6 +22,7 @@ const handleRequest = (req, res) => {
 
             if (action === 'sum') {
                 result = mathM.add(num1, num2)
+                //console.log(result)
             } else if (action === 'subtract') {
                 result = mathM.subtract(num1, num2)
             } else if (action === 'divide') {
@@ -29,11 +30,8 @@ const handleRequest = (req, res) => {
             } else if (action === 'multiply') {
                 result = mathM.multiply(num1, num2)
             }
-
             res.end(JSON.stringify({ result }))
         })
-
-        
     }
 }
 
