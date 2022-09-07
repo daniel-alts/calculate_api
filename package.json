@@ -14,7 +14,10 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "dependencies": "^0.0.1",
     "jest": "^29.0.2",
-    "supertest": "^6.2.4"
+    "package.json": "^2.0.1",
+    "supertest": "^6.2.4",
+    "the": "^1.0.2"
   }
 }
