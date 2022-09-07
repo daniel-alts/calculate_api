@@ -5,6 +5,10 @@ const PORT = 3000;
 const HOST_NAME = "localhost";
 
 const handleRequest = (req, res) => {
+	res.setHeader(
+		"Content-Type",
+		"application/json"
+	);
 	const { url, method } = req;
 	const body = [];
 	let result;
