@@ -7,7 +7,7 @@ const PORT = 3000;
 const handleRequest = (req, res) => {
     const {url, method } = req;
     const body = [];
-    let result
+    let result;
 
     if (url === '/calculate' && method === 'POST') {
         req.on('data', (chunk) => {
