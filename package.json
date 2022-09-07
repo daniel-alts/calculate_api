@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "jest": "^29.0.2",
+    "superjest": "^0.1.0",
     "supertest": "^6.2.4"
   }
 }
