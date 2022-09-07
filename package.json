@@ -1,20 +1,19 @@
 {
   "name": "calculate_api",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "__1:30 wed sep7 wk36 2022__ I'm doing my AltSchool assignment. The assignment is to fix unit and integration testing.",
+  "main": "app",
+  "repository": "git@github.com:ejeba69/calculate_api.git",
+  "author": "Emmanuel Eni <eejeba@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "test": "jest",
-    "start:dev": "nodemon app.js"
+    "start": "node app",
+    "dev": "nodemon app",
+    "test": "yarn jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.19"
-  },
-  "dependencies": {
     "jest": "^29.0.2",
+    "nodemon": "^2.0.19",
     "supertest": "^6.2.4"
   }
 }
