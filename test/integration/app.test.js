@@ -1,6 +1,11 @@
 const supertest = require('supertest');
 const server = require('../../app');
 
+afterAll(done => {
+  server.close();
+  done();
+});
+
 
 describe("Calculate", () => {
     it('POST /calculate: action: sum', async () => {
@@ -10,7 +15,7 @@ describe("Calculate", () => {
             num2: 10,
         })
 
-        // console.log({response})
+        // console.log({response});
         expect(response.status).toBe(200)
         expect(response.text).toBe(JSON.stringify({ result: 30 }))
     });
@@ -20,10 +25,9 @@ describe("Calculate", () => {
           action: "subtract",
           num1: 5,
           num2: 45,
-        });
-    
+        });    
         
-        // console.log({response})
+        // console.log({response});
         expect(response.status).toBe(200);
         expect(response.text).toBe(JSON.stringify({ result: -40 }));
     });
@@ -35,7 +39,7 @@ describe("Calculate", () => {
           num2: 2,
         });
     
-        // console.log({response})
+        // console.log({response});
         expect(response.status).toBe(200);
         expect(response.text).toBe(JSON.stringify({ result: 16 }));
     });
@@ -47,8 +51,8 @@ describe("Calculate", () => {
           num2: 2,
         });
     
-        // console.log({response})
+        // console.log({response});
         expect(response.status).toBe(200);
         expect(response.text).toBe(JSON.stringify({ result: 66 }));
     });
-})
+});
