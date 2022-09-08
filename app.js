@@ -29,8 +29,10 @@ const handleRequest = (req, res) => {
             } else if (action === 'multiply') {
                 result = mathM.multiply(num1, num2)
             }
+            
+            res.setHeader('Content-Type', 'application/json')
+            res.end(JSON.stringify(result))
 
-            res.end(JSON.stringify({ result }))
         })
 
         
@@ -39,7 +41,7 @@ const handleRequest = (req, res) => {
 
 const server = http.createServer(handleRequest);
 
-server.listen(PORT, () => {
+server.listen(PORT, 'localhost', () => {
     console.log(`Server is listening on port: ${PORT}`)
 })
 
