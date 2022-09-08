@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest",
-    "start:dev": "nodemon app.js"
+    "test": "jest --detectOpenHandles.unref()",
+    "server": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
