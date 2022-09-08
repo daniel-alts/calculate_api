@@ -4,17 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll --detectOpenHandles",
     "start:dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^29.0.2",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "jest": "^29.0.2",
     "supertest": "^6.2.4"
   }
 }
