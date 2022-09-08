@@ -6,6 +6,7 @@ test('sum: expect 30', () => {
     expect(actualResult).toBe(expectResult)
 });
 
+
 test('sum: expect 45', () => {
     const actualResult = mathM.add(15, 30)
     const expectResult = 45;

@@ -46,5 +46,6 @@ describe("Calculate", () => {
         // console.log("{result: 30}")
         expect(response.status).toBe(200)
         expect(JSON.stringify(response.body)).toBe(JSON.stringify({ result: 200 }))
+        
     })
 })
