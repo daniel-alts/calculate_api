@@ -1,7 +1,7 @@
 const mathM = require('../../math');
 
-test.only('sum: expect 30', () => {
-    const actualResult = mathM.add(20, 10) 
+test('sum: expect 30', () => {
+    const actualResult = mathM.add(20, 10); 
     const expectResult = 30;
     expect(actualResult).toBe(expectResult)
 });
