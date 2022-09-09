@@ -31,6 +31,7 @@ const handleRequest = (req, res) => {
                 result = mathM.multiply(num1, num2)
             }
 
+            res.setHeader('Content-Type', 'application/json')
             res.end(JSON.stringify({ result }))
         })
 
