@@ -45,6 +45,20 @@ describe("Calculate", () => {
 })
 
 describe("Calculate", () => {
+    it('POST /calculate: action: subtract', async () => {
+        const response = await supertest(server).post('/calculate').send({
+            action: 'subtract',
+            num1: 20,
+            num2: 10
+        });
+
+        // console.log({response})
+        expect(response.status).toBe(200)
+        expect(response.text).toBe(JSON.stringify({ result: 10 }))
+    })
+})
+
+describe("Calculate", () => {
     it('POST /calculate: action: equalTo', async () => {
         const response = await supertest(server).post('/calculate').send({
             action: 'equalTo',
