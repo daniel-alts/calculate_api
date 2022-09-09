@@ -29,3 +29,9 @@ test('multiply', () => {
     const expectResult = 200;
     expect(actualResult).toBe(expectResult)
 });
+
+test('equalTo', () => {
+    const actualResult = mathM.equalTo(10, 10) 
+    const expectResult = true;
+    expect(actualResult).toBe(expectResult)
+});
