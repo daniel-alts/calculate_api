@@ -1,6 +1,6 @@
 const mathM = require('../../math');
 
-test.only('sum: expect 30', () => {
+test('sum: expect 30', () => {
     const actualResult = mathM.add(20, 10) 
     const expectResult = 30;
     expect(actualResult).toBe(expectResult)
@@ -27,5 +27,11 @@ test('divide', () => {
 test('multiply', () => {
     const actualResult = mathM.multiply(20, 10) 
     const expectResult = 200;
+    expect(actualResult).toBe(expectResult)
+});
+
+test('equalTo', () => {
+    const actualResult = mathM.equalTo(10, 10) 
+    const expectResult = true;
     expect(actualResult).toBe(expectResult)
 });
