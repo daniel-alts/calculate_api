@@ -12,7 +12,7 @@ const handleRequest = (req, res) => {
     if (url === '/calculate' && method === 'POST') {
         req.on('data', (chunk) => {
             body.push(chunk);
-        });
+        })
 
         req.on('end', () => {
             const parsedBody = Buffer.concat(body).toString()
@@ -31,6 +31,7 @@ const handleRequest = (req, res) => {
             }
 
             res.end(JSON.stringify({ result }))
+            // console.log(`result ${result}`)
         })
 
         
