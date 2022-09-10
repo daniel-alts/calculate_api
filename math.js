@@ -7,5 +7,5 @@ module.exports = {
     add,
     subtract,
     divide,
-    multiply,
+    multiply
 }
