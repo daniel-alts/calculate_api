@@ -12,6 +12,7 @@ describe('Calculate', () => {
     expect(response.status).toBe(200);
     expect(response.text).toBe(JSON.stringify({ result: 30 }));
   });
+    
   it('POST /calculate: action: subtract', async () => {
     const response = await supertest(server).post('/calculate').send({
       action: 'subtract',
