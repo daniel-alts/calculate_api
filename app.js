@@ -17,6 +17,7 @@ const handleRequest = (req, res) => {
         req.on('end', () => {
             const parsedBody = Buffer.concat(body).toString()
             const bodyObject = JSON.parse(parsedBody);
+            
 
             const { action, num1, num2 } = bodyObject
 
@@ -31,9 +32,9 @@ const handleRequest = (req, res) => {
             }
 
             res.end(JSON.stringify({ result }))
+
         })
 
-        
     }
 }
 
@@ -43,4 +44,4 @@ server.listen(PORT, () => {
     console.log(`Server is listening on port: ${PORT}`)
 })
 
-module.exports = server;
+module.exports = server
