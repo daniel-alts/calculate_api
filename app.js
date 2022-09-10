@@ -39,8 +39,8 @@ const handleRequest = (req, res) => {
 
 const server = http.createServer(handleRequest);
 
-server.listen(PORT, () => {
-    console.log(`Server is listening on port: ${PORT}`)
-})
+// server.listen(PORT, () => {
+//     console.log(`Server is listening on port: ${PORT}`)
+// })
 
 module.exports = server;
