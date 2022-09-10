@@ -1,31 +1,31 @@
 const mathM = require('../../math');
 
-test.only('sum: expect 30', () => {
+test('add 20 + 10', () => {
     const actualResult = mathM.add(20, 10) 
     const expectResult = 30;
-    expect(actualResult).toBe(expectResult)
+    expect(mathM.add(20, 10)).toBe(30)
 });
 
-test('sum: expect 45', () => {
+test('add 15 + 30', () => {
     const actualResult = mathM.add(15, 30)
     const expectResult = 45;
-    expect(actualResult).toBe(expectResult)
+    expect(mathM.add(15, 30)).toBe(45)
 });
 
-test('subtract', () => {
+test('subtract 20 - 10', () => {
     const actualResult = mathM.subtract(20, 10) 
     const expectResult = 10;
-    expect(actualResult).toBe(expectResult)
+    expect(mathM.subtract(20, 10)).toBe(10)
 });
 
-test('divide', () => {
+test('divide 20 / 10', () => {
     const actualResult = mathM.divide(20, 10) 
     const expectResult = 2;
-    expect(actualResult).toBe(expectResult)
+    expect(mathM.divide(20, 10)).toBe(2)
 });
 
-test('multiply', () => {
+test('multiply 20 * 10', () => {
     const actualResult = mathM.multiply(20, 10) 
     const expectResult = 200;
-    expect(actualResult).toBe(expectResult)
+    expect(mathM.multiply(20, 10)).toBe(200)
 });
