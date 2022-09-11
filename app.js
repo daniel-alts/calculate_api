@@ -9,6 +9,7 @@ const handleRequest = (req, res) => {
     const body = [];
     let result
 
+    res.setHeader('Content-Type', 'application/json');
     if (url === '/calculate' && method === 'POST') {
         req.on('data', (chunk) => {
             body.push(chunk);
