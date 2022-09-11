@@ -1,7 +1,7 @@
 {
   "name": "calculate_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "app to calculate",
   "main": "app.js",
   "scripts": {
     "test": "jest",
