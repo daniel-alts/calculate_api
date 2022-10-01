@@ -5,7 +5,7 @@ const mathM = require('./math')
 const PORT = 3000;
 
 const handleRequest = (req, res) => {
-    const {url, method } = req;
+    const { url, method } = req;
     const body = [];
     let result
 
@@ -33,7 +33,7 @@ const handleRequest = (req, res) => {
             res.end(JSON.stringify({ result }))
         })
 
-        
+
     }
 }
 
