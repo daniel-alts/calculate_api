@@ -29,9 +29,12 @@ const handleRequest = (req, res) => {
 				result = mathM.multiply(num1, num2);
 			}
 
+			res.setHeader("Content-Type", "application/json");
+			res.writeHead(200);
 			res.end(JSON.stringify({ result }));
 		});
 	} else if (url === "/" && method === "GET") {
+		res.setHeader("Content-Type", "application/json");
 		res.writeHead(200).end(JSON.stringify({ message: "Welcome to Calculate API" }));
 	}
 };
