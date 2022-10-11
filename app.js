@@ -28,6 +28,8 @@ const handleRequest = (req, res) => {
                 result = mathM.divide(num1, num2)
             } else if (action === 'multiply') {
                 result = mathM.multiply(num1, num2)
+            } else{
+                res.end('Action Does Not Exist')
             }
 
             res.end(JSON.stringify({ result }))
