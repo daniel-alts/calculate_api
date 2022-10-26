@@ -6,8 +6,8 @@ describe("Calculate", () => {
     it('POST /calculate: action: sum', async () => {
         const response = await supertest(server).post('/calculate').send({
             action: 'sum',
-            num1: 20,
-            num2: 10
+            num1: 30,
+            num2: 20
         })
 
         // console.log({response})
