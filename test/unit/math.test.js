@@ -1,5 +1,5 @@
 const mathM = require('../../math');
-
+// integration test sum
 test.only('sum: expect 30', () => {
     const actualResult = mathM.add(20, 10) 
     const expectResult = 30;
@@ -11,21 +11,23 @@ test('sum: expect 45', () => {
     const expectResult = 45;
     expect(actualResult).toBe(expectResult)
 });
-
+// integration test for subtraction
 test('subtract', () => {
     const actualResult = mathM.subtract(20, 10) 
     const expectResult = 10;
     expect(actualResult).toBe(expectResult)
 });
-
+// integration test for division
 test('divide', () => {
     const actualResult = mathM.divide(20, 10) 
     const expectResult = 2;
     expect(actualResult).toBe(expectResult)
 });
 
+// integration test for multiplication
 test('multiply', () => {
     const actualResult = mathM.multiply(20, 10) 
     const expectResult = 200;
     expect(actualResult).toBe(expectResult)
 });
+
