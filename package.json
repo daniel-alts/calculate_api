@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "jest": "^29.0.2",
-    "supertest": "^6.2.4"
+    "supertest": "^6.2.4",
+    "dotenv": "^16.4.1"
   }
 }
