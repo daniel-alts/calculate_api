@@ -1,8 +1,9 @@
 const http = require('http');
 const mathM = require('./math')
+require('dotenv').config()
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const handleRequest = (req, res) => {
     const {url, method } = req;
